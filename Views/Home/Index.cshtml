@@ -5,13 +5,10 @@
 }
 
 <aside id="left-side">
-    <form>
+    <form action="geo/" method="get">
         <div class="input-group">
             <span class="input-group-text"><i class="fa-solid fa-magnifying-glass" style="color: black;"></i></span>
             <input type="text" class="form-control" placeholder="Enter your location..." />
-        </div>
-        <div class="input-group">
-            
         </div>
     </form>
 </aside>
@@ -44,6 +41,7 @@
                 <h4>@Html.DisplayFor(m => m.weather.current.humidity)%</h4>
             </div>
         </div>
+
         <div class="row justify-content-center">
             <div id="detail-label" class="col-4">
                 <p>Wind Speed</p>

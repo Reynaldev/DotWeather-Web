@@ -5,15 +5,13 @@
 }
 
 <aside id="left-side">
-    <form action="geo/" method="get">
-        <div class="input-group">
-            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass" style="color: black;"></i></span>
-            <input type="text" class="form-control" placeholder="Enter your location..." />
-        </div>
-    </form>
+    <div class="input-group">
+        <span class="input-group-text bg-dark"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <input type="text" id="location-input" class="form-control" placeholder="Enter your location..." onkeypress="locationEnter(event)">
+    </div>
 </aside>
 
-<main id="right-side">
+<main id="right-side" onload="refresh()">
     <div id="weather">
         <p id="region-label">@Html.DisplayFor(m => m.location.name)</p>
 
@@ -58,15 +56,23 @@
 <script>
     let isOpen = false;
 
-    function searchBar()
+    function locationEnter(event)
     {
-        if (isOpen)
+        if (event.keyCode == 13)
         {
+            let input = document.getElementById("location-input").value;
 
-        }
-        else
-        {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function()
+            {
+                input = this.responseText;
+            }
 
+            const url = "geo/" + input;
+            xhttp.open("GET", url, true);
+            xhttp.send();
+
+            document.getElementById("location-input").value = null;
         }
     }
 </script>

@@ -65,7 +65,7 @@ public class HomeController : Controller
         string content = await _response.Content.ReadAsStringAsync();
         _weather = JsonSerializer.Deserialize<OpenWeather>(content);
 
-        return RedirectToAction("Index");
+        return RedirectToPage("Index");
         // return $"{_weather.current.temp}";
     }
 

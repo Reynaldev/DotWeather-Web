@@ -1,0 +1,77 @@
+* {
+  color: #F5F5F5;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-size: 18px;
+}
+
+body {
+  background-color: black;
+  background-image: linear-gradient(#424242, #000000);
+}
+
+footer {
+  padding: 2em;
+  text-align: center;
+}
+
+#left-side {
+  background-color: #212121;
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  padding: 16px;
+}
+
+#right-side {
+  width: 75%;
+}
+
+#weather {
+  text-align: center;
+}
+
+#region-label {
+  background-color: #424242;
+  min-width: 200px;
+  padding: 16px;
+  border: 2px solid #616161;
+  border-radius: 25px;
+}
+
+#temp {
+  margin: 2em 0 2em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#detail {
+  margin-top: 2em;
+}
+
+#detail-label {
+  background-color: #424242;
+  min-width: 200px;
+  margin: 2em;
+  padding: 16px;
+  border: 2px solid #616161;
+  border-radius: 25px;
+}
+
+#detail-label p {
+  color: #9E9E9E;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}

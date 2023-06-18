@@ -1,0 +1,74 @@
+﻿@model WeatherData;
+
+@{
+    ViewData["Title"] = "DotWeather";
+}
+
+<aside id="left-side">
+    <form>
+        <div class="input-group">
+            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass" style="color: black;"></i></span>
+            <input type="text" class="form-control" placeholder="Enter your location..." />
+        </div>
+        <div class="input-group">
+            
+        </div>
+    </form>
+</aside>
+
+<main id="right-side">
+    <div id="weather">
+        <p id="region-label">@Html.DisplayFor(m => m.location.name)</p>
+
+        <br>
+        
+        <div id="temp">
+            <h1>@Html.DisplayFor(m => m.weather.current.temp)</h1>
+            <p>°C</p>
+        </div>
+
+        <br>
+        
+        <p>@Html.DisplayFor(m => m.weather.current.weather[0].description)</p>
+
+    </div>
+
+    <div id="detail" class="container">
+        <div class="row justify-content-center">
+            <div id="detail-label" class="col-4">
+                <p>Pressure</p>
+                <h4>@Html.DisplayFor(m => m.weather.current.pressure)mbar</h4>
+            </div>
+            <div id="detail-label" class="col-4">
+                <p>Humidity</p>
+                <h4>@Html.DisplayFor(m => m.weather.current.humidity)%</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div id="detail-label" class="col-4">
+                <p>Wind Speed</p>
+                <h4>@Html.DisplayFor(m => m.weather.current.wind_speed)km/h</h4>
+            </div>
+            <div id="detail-label" class="col-4">
+                <p>UVI</p>
+                <h4>@Html.DisplayFor(m => m.weather.current.uvi)</h4>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    let isOpen = false;
+
+    function searchBar()
+    {
+        if (isOpen)
+        {
+
+        }
+        else
+        {
+
+        }
+    }
+</script>

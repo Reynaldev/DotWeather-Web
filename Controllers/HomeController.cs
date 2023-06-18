@@ -23,6 +23,11 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        return View();
+    }
+
+    public IActionResult Forecast()
+    {
         if (_location.Count > 0)
         {
             WeatherData weatherData = new WeatherData()
@@ -37,7 +42,7 @@ public class HomeController : Controller
         {
             return View();
         }
-    } 
+    }
 
     [HttpGet("geo/{loc}")]
     public async Task<IActionResult> GetLocation(string loc)

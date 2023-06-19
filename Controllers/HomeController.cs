@@ -49,6 +49,11 @@ public class HomeController : Controller
         }
     }
 
+    public IActionResult About()
+    {
+        return View();
+    }
+
     [HttpGet("locations/{loc}")]
     public async Task<IActionResult> GetAnyLocations(string loc)
     {
@@ -91,11 +96,6 @@ public class HomeController : Controller
 
         return RedirectToAction("Forecast");
         // return $"{_weather.current.temp}";
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

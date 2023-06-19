@@ -16,7 +16,7 @@ body {
 }
 
 a, .nav-link {
-  color: #F5F5F5;
+  color: #C0C0C0;
   text-decoration: none;
   transition: 0.5s;
 }
@@ -100,6 +100,11 @@ footer {
   color: #9E9E9E;
 }
 
+#about-page {
+  padding: 8em;
+  text-align: center;
+}
+
 .navbar {
   background-color: #212121;
   width: 100%;
@@ -119,5 +124,5 @@ footer {
 
 @font-face {
   font-family: Manrope;
-  src: url("/wwwroot/fonts/Manrope-Regular.ttf");
+  src: url("../fonts/Manrope-Regular.ttf");
 }

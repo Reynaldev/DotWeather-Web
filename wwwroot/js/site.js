@@ -20,7 +20,7 @@ function locationEnter(event)
         xhttp.send();
 
         document.getElementById("location-input").value = null;
-        // window.location.replace("/Home/forecast");
+        // window.location.replace("/Home/forecast");   // This doesn't work well
     }
 }
 

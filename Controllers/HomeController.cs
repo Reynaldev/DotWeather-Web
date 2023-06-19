@@ -44,6 +44,20 @@ public class HomeController : Controller
         }
     }
 
+    [HttpGet("locations/{loc}")]
+    public async Task<IActionResult> GetAnyLocations(string loc)
+    {
+        _response = await _httpClient.GetAsync($"http://api.openweathermap.org/geo/1.0/direct?q={loc}&limit=5&appid=18ccbbd129b7bdecaaf072a9f9977f01");
+
+        if (!_response.IsSuccessStatusCode)
+            return NotFound();
+
+        string content = await _response.Content.ReadAsStringAsync();
+        _location = JsonSerializer.Deserialize<List<UserLocation>>(content);
+
+        return RedirectToAction("Index");
+    }
+
     [HttpGet("geo/{loc}")]
     public async Task<IActionResult> GetLocation(string loc)
     {
@@ -70,7 +84,7 @@ public class HomeController : Controller
         string content = await _response.Content.ReadAsStringAsync();
         _weather = JsonSerializer.Deserialize<OpenWeather>(content);
 
-        return RedirectToPage("Index");
+        return RedirectToAction("Forecast");
         // return $"{_weather.current.temp}";
     }
 

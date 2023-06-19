@@ -2,7 +2,6 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-let isOpen = true;
 
 function locationEnter(event)
 {
@@ -21,6 +20,7 @@ function locationEnter(event)
         xhttp.send();
 
         document.getElementById("location-input").value = null;
+        window.location.replace("/Home/forecast");
     }
 }
 

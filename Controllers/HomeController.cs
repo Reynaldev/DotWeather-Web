@@ -32,8 +32,13 @@ public class HomeController : Controller
         {
             WeatherData weatherData = new WeatherData()
             {
-                location = _location[0],
-                weather = _weather
+                Name = _location[0].name,
+                Description = _weather.current.weather[0].description,
+                WindSpeed = _weather.current.wind_speed,
+                Temp = (int)_weather.current.temp,
+                Pressure = (int)_weather.current.pressure,
+                Humidity = (int)_weather.current.humidity,
+                UVI = (int)_weather.current.uvi
             };
 
             return View(weatherData);

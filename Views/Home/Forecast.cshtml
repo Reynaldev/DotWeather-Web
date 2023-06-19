@@ -6,18 +6,18 @@
 
 <main id="right-side" onload="refresh()">
     <div id="weather">
-        <p id="region-label">@Html.DisplayFor(m => m.location.name)</p>
+        <p id="region-label">@Html.DisplayFor(m => m.Name)</p>
 
         <br>
         
         <div id="temp">
-            <h1>@Html.DisplayFor(m => m.weather.current.temp)</h1>
+            <h1>@Html.DisplayFor(m => m.Temp)</h1>
             <p>°C</p>
         </div>
 
         <br>
         
-        <p>@Html.DisplayFor(m => m.weather.current.weather[0].description)</p>
+        <p>@Html.DisplayFor(m => m.Description)</p>
 
     </div>
 
@@ -25,22 +25,22 @@
         <div class="row justify-content-center">
             <div id="detail-label" class="col-4">
                 <p>Pressure</p>
-                <h4>@Html.DisplayFor(m => m.weather.current.pressure)mbar</h4>
+                <h4>@Html.DisplayFor(m => m.Pressure)mbar</h4>
             </div>
             <div id="detail-label" class="col-4">
                 <p>Humidity</p>
-                <h4>@Html.DisplayFor(m => m.weather.current.humidity)%</h4>
+                <h4>@Html.DisplayFor(m => m.Humidity)%</h4>
             </div>
         </div>
 
         <div class="row justify-content-center">
             <div id="detail-label" class="col-4">
                 <p>Wind Speed</p>
-                <h4>@Html.DisplayFor(m => m.weather.current.wind_speed)km/h</h4>
+                <h4>@Html.DisplayFor(m => m.WindSpeed)km/h</h4>
             </div>
             <div id="detail-label" class="col-4">
                 <p>UVI</p>
-                <h4>@Html.DisplayFor(m => m.weather.current.uvi)</h4>
+                <h4>@Html.DisplayFor(m => m.UVI)</h4>
             </div>
         </div>
     </div>

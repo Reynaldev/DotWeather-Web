@@ -35,6 +35,13 @@ public class Weather
 
 public class WeatherData
 {
-    public UserLocation? location { get; set; }
-    public OpenWeather? weather { get; set; }
+    // public UserLocation? location { get; set; }
+    // public OpenWeather? weather { get; set; }
+    public string? Name { get; set; }
+    public string? Description { get; set; }
+    public double? WindSpeed { get; set; }
+    public int? Temp { get; set; }
+    public int? Pressure { get; set; }
+    public int? Humidity { get; set; }
+    public int? UVI { get; set; }
 }

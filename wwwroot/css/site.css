@@ -1,4 +1,5 @@
 * {
+  font-family: Manrope;
   color: #F5F5F5;
 }
 
@@ -114,4 +115,9 @@ footer {
   html {
     font-size: 16px;
   }
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url("/wwwroot/fonts/Manrope-Regular.ttf");
 }
